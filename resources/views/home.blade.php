@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Homepage</title>
+  <title>{{$title}}</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.2.1"></script>
   @vite('resources/css/app.css')
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
@@ -28,6 +28,7 @@
         <a href="/about" class="text-slate-400 hover:text-white transition text-sm font-medium">About Us!</a>
         <a href="/contact" class="text-slate-400 hover:text-white transition text-sm font-medium">Contact</a>
         <a href="/link" class="text-slate-400 hover:text-white transition text-sm font-medium">Link Baru</a>
+        <a href="/konten" class="text-slate-400 hover:text-white transition text-sm font-medium">Konten</a>
       </div>
 
       <!-- Toolbar -->
@@ -140,8 +141,15 @@
       <h1 class="text-2xl font-bold tracking-tight text-white">Dashboard</h1>
       <p class="mt-1 text-sm text-slate-400">Kamu berada di halaman Dashboard</p>
     </div>
+ @for ($nilai=1;$nilai>=10;$nilai++)
+    <p>class='text-slate-400'>ini adalah looping ke-{{$nilai}}</p>
+  @endfor
   </header>
-
+<main>
+  @for ($nilai=1;$nilai>=10;$nilai++)
+    <p>class='text-slate-400'>ini adalah looping ke-{{$nilai}}</p>
+  @endfor
+</main>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
 </body>

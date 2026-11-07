@@ -9,11 +9,14 @@ Route::get('/', function () {
 });
 
 Route::get('/home', function () {
-    return view('home');
+    return view('home',['title'=>'Homepage']);
 });
 Route::get('/about', function () {
-    return view('about');
+    return view('about',['title'=>'About Us']);
 });
 Route::get('/contact', function () {
-    return view('contact');
+    return view('contact',['title'=>'Contact']);
+});
+Route::get('/konten', function () {
+    return view('konten');
 });
